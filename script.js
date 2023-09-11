@@ -1,0 +1,1 @@
+var res = document.querySelector('#res');
