@@ -1,57 +1,61 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
-    <title>Calculadora</title>
-</head>
-<body>
-    <header>
-        <img src="imagens/calculadora.png" alt="calculadora">
-        <h1>BetterCalc</h1>
-    </header>
-    <main>
-        <div id="calculadora">
-            <div id="flex">
-                <div id="res"><p id="result"></p></div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="assets/styles/style.css" />
+        <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
+        <title>Calculadora</title>
+    </head>
+    <body>
+        <header>
+            <img src="assets/images/calculadora.png" alt="calculadora" />
+            <h1>BetterCalc</h1>
+        </header>
+        <main>
+            <div id="calculadora">
+                <div id="flex">
+                    <div id="res"><p id="result"></p></div>
+                </div>
+                <table>
+                    <tr>
+                        <td><button onclick="limpar()">CE</button></td>
+                        <td><button onclick="apagar()">C</button></td>
+                        <td><button onclick="inserir('/')" style="font-size: xx-large;">&#247;</button></td>
+                        <td><button onclick="inserir('*')">X</button></td>
+                    </tr>
+                    <tr>
+                        <td><button onclick="inserir('7')">7</button></td>
+                        <td><button onclick="inserir('8')">8</button></td>
+                        <td><button onclick="inserir('9')">9</button></td>
+                        <td><button onclick="inserir('+')">+</button></td>
+                    </tr>
+                    <tr>
+                        <td><button onclick="inserir('4')">4</button></td>
+                        <td><button onclick="inserir('5')">5</button></td>
+                        <td><button onclick="inserir('6')">6</button></td>
+                        <td><button onclick="inserir('-')">-</button></td>
+                    </tr>
+                    <tr>
+                        <td><button onclick="inserir('1')">1</button></td>
+                        <td><button onclick="inserir('2')">2</button></td>
+                        <td><button onclick="inserir('3')">3</button></td>
+                        <td rowspan="2">
+                            <button id="igual" onclick="calcular()">=</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <button id="zero" onclick="inserir('0')">0</button>
+                        </td>
+                        <td><button onclick="inserir('.')">.</button></td>
+                    </tr>
+                </table>
+                <a href="https://instagram.com/m1guel.cb" target="_blank" rel="external"
+                    ><img src="assets/images/logo-instagram.jpg" alt="instagram" /> M1guel.cb</a
+                >
             </div>
-            <table>
-                <tr>
-                    <td><button onclick="limpar()">CE</button></td>
-                    <td><button onclick="apagar()">C</button></td>
-                    <td><button onclick="inserir('/')">/</button></td>
-                    <td><button onclick="inserir('*')">*</button></td>
-                </tr>
-                <tr>
-                    <td><button onclick="inserir('7')">7</button></td>
-                    <td><button onclick="inserir('8')">8</button></td>
-                    <td><button onclick="inserir('9')">9</button></td>
-                    <td><button onclick="inserir('+')">+</button></td>
-                </tr>
-                <tr>
-                    <td><button onclick="inserir('4')">4</button></td>
-                    <td><button onclick="inserir('5')">5</button></td>
-                    <td><button onclick="inserir('6')">6</button></td>
-                    <td><button onclick="inserir('-')">-</button></td>
-                </tr>
-                <tr>
-                    <td><button onclick="inserir('1')">1</button></td>
-                    <td><button onclick="inserir('2')">2</button></td>
-                    <td><button onclick="inserir('3')">3</button></td>
-                    <td rowspan="2"><button id="igual" onclick="calcular()">=</button></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><button id="zero" onclick="inserir('0')">0</button></td>
-                    <td><button onclick="inserir('.')">.</button></td>
-                </tr>
-            </table>
-        </div>
-    </main>
-    <footer>
-        <p><a href="https://instagram.com/m1guel.cb" target="_blank" rel="external"><img src="imagens/logo-instagram.jpg" alt="instagram"> M1guel.cb</a></p>
-    </footer>
-    <script src="script.js"></script>
-</body>
+        </main>
+        <script src="assets/js/script.js"></script>
+    </body>
 </html>

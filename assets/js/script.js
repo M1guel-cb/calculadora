@@ -19,3 +19,14 @@ function calcular() {
         document.querySelector('#result').innerHTML = "Nenhum comando";
     }
 }
+
+document.addEventListener('keydown', (e) => {
+    let numsopr = "1 2 3 4 5 6 7 8 9 0 + - * / ."
+    if (numsopr.includes(`${e.key}`)) {
+        inserir(`${e.key}`)
+    } else if ("=" == e.key || "Enter" == e.key) {
+        calcular()
+    } else if (e.key == "Backspace") {
+        apagar()
+    }
+})
